@@ -1,0 +1,533 @@
+@import url("https://fonts.googleapis.com/css2?family=Staatliches&display=swap");
+@import "tailwindcss/base";
+@import "tailwindcss/components";
+@import "tailwindcss/utilities";
+html,
+body {
+  padding: 0;
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
+    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  overflow: hidden;
+}
+::-webkit-scrollbar {
+  width: 6px;
+}
+::-webkit-scrollbar-track {
+  background: none;
+  height: 0%;
+}
+::-webkit-scrollbar-thumb {
+  background: #ff7800;
+}
+h1 {
+  font-family: "Staatliches", cursive;
+}
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+* {
+  box-sizing: border-box;
+}
+.avatar {
+  position: relative;
+  height: 330px;
+  width: 330px;
+  background: rgba(255, 255, 255, 0.15);
+  border: 3px solid rgba(255, 255, 255, 0.5);
+  box-sizing: border-box;
+  box-shadow: inset 44.9321px -44.9321px 44.9321px rgba(194, 194, 194, 0.1),
+    inset -44.9321px 44.9321px 44.9321px rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(89.8643px);
+  border-radius: 350px;
+}
+.avatar_img {
+  position: absolute;
+  top: -50px;
+  left: 15px;
+  width: 302.92px;
+  height: 378.65px;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  filter: drop-shadow(0px 4px 14px rgba(0, 0, 0, 0.35));
+}
+.button-next-prev {
+  position: absolute;
+  width: 168.96px;
+  height: 60.45px;
+  top: 353px;
+  left: 25%;
+  background: rgba(255, 255, 255, 0.15);
+  border: 2px solid rgba(255, 255, 255, 0.5);
+  box-sizing: border-box;
+  box-shadow: inset 44.9321px -44.9321px 44.9321px rgba(194, 194, 194, 0.1),
+    inset -44.9321px 44.9321px 44.9321px rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(89.8643px);
+  border-radius: 40px;
+}
+.market_bg {
+  background: url("../public/Market/market1.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+.loginForm {
+  position: relative;
+  width: 470px;
+  height: 470px;
+  background: rgba(255, 255, 255, 0.15);
+  border: 3px solid rgba(255, 255, 255, 0.5);
+  box-shadow: inset 44.9321px -44.9321px 44.9321px rgba(194, 194, 194, 0.1),
+    inset -44.9321px 44.9321px 44.9321px rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(89.8643px);
+  border-radius: 20px;
+  z-index: 1;
+}
+.loginPanel {
+  position: absolute;
+  height: 73.45px;
+  width: 300px;
+  top: -40px;
+  left: 86px;
+  background: url("../public/Market/loginPanel-bg.png");
+}
+.loginButton {
+  border: 4px solid #ffffff;
+  box-shadow: inset 1.1px -14.8px 10px rgba(0, 0, 0, 0.19),
+    inset -1.10478px 14.8px 6px rgba(255, 255, 255, 0.19);
+  border-radius: 8px;
+  color: white;
+  font-size: 1.5rem;
+}
+.activePanel {
+  background-color: white;
+  color: #ff7800;
+  margin: 0.5rem 0 0.5rem 0;
+  padding: 0 2.1rem 0 2.1rem;
+  border-radius: 25px;
+}
+.rulebg-img {
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url("../public/Market/Rulebg.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  background-blend-mode: darken;
+}
+
+.scratch {
+  position: relative;
+  background: url("../public/Market/Rulebg.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 100vh;
+  width: 100vw;
+}
+.scratch_title {
+  position: absolute;
+  display: flex;
+  height: 100px;
+  width: 100vw;
+  justify-content: center;
+  top: -20.75px;
+}
+.scratch_title h1 {
+  font-size: 55px;
+  line-height: 69px;
+  text-align: center;
+  padding: 26.75px 36.5px 10.25px 36.5px;
+  color: #ffffff;
+  background: #000000;
+  box-shadow: 0px 9px 19px rgba(0, 0, 0, 0.45),
+    inset 0px 1px 24px rgba(255, 255, 255, 0.25);
+  border-radius: 20px;
+}
+.time_scratch {
+  position: absolute;
+  width: 129px;
+  height: 69px;
+  left: 32.69px;
+  top: 15.48px;
+
+  font-weight: normal;
+  font-size: 55px;
+  line-height: 69px;
+  color: #ffffff;
+}
+.time_scratch span {
+  position: absolute;
+  width: 58px;
+  height: 44px;
+  left: 172.1px;
+  top: 20px;
+
+  font-weight: normal;
+  font-size: 35px;
+  line-height: 44px;
+  color: #ffffff;
+}
+.scratch_grid {
+  position: absolute;
+  top: 12vh;
+  display: grid;
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+  grid-template-rows: repeat(3, minmax(0, 1fr));
+}
+
+.scratch_card {
+  position: relative;
+  background-size: cover;
+  background-position: center;
+  background-origin: content-box;
+  background-repeat: no-repeat;
+  width: 262.85px;
+  height: 171.58px;
+  opacity: 0.5;
+  cursor: pointer;
+  transition: all 0.4s ease;
+}
+.scratch_card:hover {
+  opacity: 1;
+  transform: translateY(-10px);
+  filter: drop-shadow(0px 4px 14px rgba(255, 255, 255, 0.45));
+}
+.scratch_card h1 {
+  margin-top: 40px;
+  font-size: 25px;
+  line-height: 31px;
+
+  text-align: center;
+  color: #ffffff;
+}
+.scratch_pumpkin img {
+  width: 70.46px;
+  height: 58.27px;
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25))
+    drop-shadow(0px 2px 0px #000000);
+}
+.scratch_pumpkin h1 {
+  font-size: 20px;
+  line-height: 27px;
+  text-align: center;
+  color: #ffffff;
+}
+.center_btn {
+  position: absolute;
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  bottom: 20px;
+}
+.scratch_btn {
+  margin: auto;
+  font-size: 28px;
+  line-height: 38px;
+  color: #ffffff;
+  padding: 10.75px 96.76px 10.75px 96.76px;
+  background: #7a7a7a;
+  transition: all 0.4s ease;
+  border: 4px solid #ffffff;
+  box-shadow: inset 1.1px -14.8px 10px rgba(0, 0, 0, 0.19),
+    inset -1.10478px 14.8px 6px rgba(255, 255, 255, 0.19);
+  border-radius: 7px;
+}
+.scratch_btn:hover {
+  background: #ff7800;
+  border: 4px solid #ffffff;
+  box-shadow: inset 1.1px -14.8px 10px rgba(0, 0, 0, 0.19),
+    inset -1.10478px 14.8px 6px rgba(255, 255, 255, 0.19);
+}
+
+.vegeCardDiv {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.vegeCard {
+  background-size: cover;
+  background-position: center;
+  background-origin: content-box;
+  background-repeat: no-repeat;
+}
+.cardNo {
+  background: rgba(0, 0, 0, 0.5);
+}
+.cardNoGodown {
+  background: rgba(0, 0, 0, 0.7);
+  box-shadow: inset 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+.popUpDiv {
+  width: 70vw;
+  height: 87vh;
+  background: rgba(255, 255, 255, 0.5);
+  border: 4px solid rgba(255, 255, 255, 0.4);
+  box-shadow: 0px 15px 24px rgba(0, 0, 0, 0.65),
+    inset 44.9321px -44.9321px 44.9321px rgba(194, 194, 194, 0.1),
+    inset -44.9321px 44.9321px 44.9321px rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(89.8643px);
+  border-radius: 27px;
+}
+.popUp::before {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.6);
+  content: "";
+  pointer-events: none;
+}
+.ruleCard {
+  filter: drop-shadow(0px 4px 24px rgba(0, 0, 0, 0.45));
+}
+
+.bg-godown {
+  background: url("../public/Market/godown.png");
+  height: 100vh;
+  width: 100vw;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.bag {
+  position: absolute;
+  bottom: 40px;
+  left: 19px;
+  width: 85px;
+  height: 85px;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background: rgba(255, 255, 255, 0.2);
+  box-shadow: 0px 15px 24px rgba(0, 0, 0, 0.35),
+    inset 44.9321px -44.9321px 44.9321px rgba(194, 194, 194, 0.1),
+    inset -44.9321px 44.9321px 44.9321px rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(89.8643px);
+  cursor: pointer;
+  border-radius: 110px;
+}
+.bagOnClick {
+  position: absolute;
+  bottom: 0;
+  left: 19px;
+  width: 87px;
+  height: 376px;
+  background: rgba(255, 255, 255, 0.2);
+  box-shadow: 0px 15px 24px rgba(0, 0, 0, 0.65),
+    inset 44.9321px -44.9321px 44.9321px rgba(194, 194, 194, 0.1),
+    inset -44.9321px 44.9321px 44.9321px rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(89.8643px);
+
+  /* Note: backdrop-filter has minimal browser support */
+  border-radius: 14px 14px 0px 0px;
+}
+.bag_click {
+  width: 87px;
+  height: 28px;
+  background: rgba(0, 0, 0, 0.2);
+  border-radius: 0px;
+}
+.bag_icons {
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+}
+.nb {
+  transform: rotate(-75.71deg);
+}
+.bag_txt {
+  margin-top: -10px;
+  margin-bottom: 10px;
+  color: #fff;
+  font-size: 16px;
+  line-height: 22px;
+}
+.peek_market {
+  position: absolute;
+  width: 127px;
+  height: 75.14px;
+  right: 0px;
+  top: 323.02px;
+  background: rgba(255, 255, 255, 0.2);
+  box-shadow: 0px 15px 24px rgba(0, 0, 0, 0.65),
+    inset 44.9321px -44.9321px 44.9321px rgba(194, 194, 194, 0.1),
+    inset -44.9321px 44.9321px 44.9321px rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(89.8643px);
+  border-radius: 14px 0px 0px 14px;
+  text-align: center;
+}
+.peek_market img {
+  margin-top: -58px;
+  margin-left: -30px;
+}
+.peek_market h2 {
+  margin-top: 8px;
+  color: #fff;
+  font-size: 20px;
+  line-height: 27px;
+}
+.bg_phone{
+  background: url("../public/Market/handPhone.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  position: absolute;
+  width: 60vw;
+  height: 94vh;
+  left: 51.6vw;
+  top: -11vh;
+}
+.phn_button_active{
+  color: white ;
+  background: #FF7800;
+  border: 1.5px solid #FFFFFF;
+  box-shadow: inset 1.1px -14.8px 10px rgba(0, 0, 0, 0.09), inset -1.10478px 14.8px 6px rgba(255, 255, 255, 0.1);
+  border-radius: 3px;
+  padding: 2px 25px 2px 25px;
+  font-weight: 600;
+}
+.windowShop_bg{
+  background: url('../public/Market/Windowshop.png');
+  height: 100vh;
+  width: 100vw;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.shopCard{
+  width: 300px;
+  height: 130px;
+  margin: 10px 10px 10px 10px;
+  background: rgba(255, 255, 255, 0.5);
+  border: 3px solid rgba(255, 255, 255, 0.4);
+  box-sizing: border-box;
+  box-shadow: 0px 15px 24px rgba(0, 0, 0, 0.65), inset 44.9321px -44.9321px 44.9321px rgba(194, 194, 194, 0.1), inset -44.9321px 44.9321px 44.9321px rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(89.8643px);
+  border-radius: 17px;
+  font-size: 44px;
+  font-weight: 600;
+  color: white;
+  text-align: center;
+  line-height: 130px;
+}
+.avatarBox{
+  background: rgba(0, 0, 0, 0.45);
+  border: 4px solid rgba(255, 255, 255, 0.4);
+  box-sizing: border-box;
+  border-radius: 20px;
+  padding: 0 12px;
+}
+.bg_room{
+  background: url("../public/Market/room.png");
+  height: 100vh;
+  width: 100vw;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.hoverAvatar:hover{
+  filter: drop-shadow(0px 4px 10px rgba(255, 255, 255, 0.65));
+}
+.animation{
+  animation: fall 4s;
+}
+
+@keyframes fall{
+  0%{
+    top: 0;
+  }
+  100%{
+    top: 50%;
+  }
+}
+
+.leaderboard{
+  position: absolute;
+  width: 90vw;
+  height: 83vh;
+  bottom: 0;
+  left: 0; 
+  right: 0; 
+  margin-left: auto; 
+  margin-right: auto; 
+  padding: 15px 10px 10px 15px;
+  background: rgba(255, 255, 255, 0.5);
+  border-top: 4px solid rgba(255, 255, 255, 0.4);
+  border-left: 4px solid rgba(255, 255, 255, 0.4);
+  border-right: 4px solid rgba(255, 255, 255, 0.4);
+  box-sizing: border-box;
+  box-shadow: 0px 15px 24px rgba(0, 0, 0, 0.65), inset 44.9321px -44.9321px 44.9321px rgba(194, 194, 194, 0.1), inset -44.9321px 44.9321px 44.9321px rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(89.8643px);
+  border-top-right-radius: 27px;
+  border-top-left-radius: 27px;
+}
+.ruleDivBg{
+  height: 82vh;
+  width: 92vw;
+  background: rgba(255, 255, 255, 0.5);
+  border: 4px solid rgba(255, 255, 255, 0.4);
+  box-sizing: border-box;
+  box-shadow: 0px 15px 24px rgba(0, 0, 0, 0.65), inset 44.9321px -44.9321px 44.9321px rgba(194, 194, 194, 0.1), inset -44.9321px 44.9321px 44.9321px rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(89.8643px);
+  border-radius: 27px;
+}
+.bg_handNotes{
+  background: url("../public/Market/handNotes.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  position: absolute;
+  width: 60vw;
+  height: 104vh;
+  left: 51vw;
+  top: -17vh;
+}
+.recordbg{
+  background: url("../public/Market/recordbg.png");
+  height: 100vh;
+  width: 100vw;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.recordbg1{
+  background: url("../public/Market/recordbg1.png");
+  height: 125vh;
+  width: 100vw;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.recordDiv{
+  width: 74vw;
+  height: 32vh;
+  background: #FFFFFF;
+  box-shadow: 0px 24px 24px rgba(0, 0, 0, 0.15);
+  border-radius: 64px 9px 9px 9px;
+  margin-bottom: 3%;
+}
+.tablenomat{
+  background: url("../public/Market/tablenomat.png");
+  height: 100vh;
+  width: 100vw;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.time_scratchRight {
+  color: white;
+  font-size: 50px;
+  position: relative;
+  float: right;
+  margin-right: 20px;
+}
+.bg_phoneDown{
+  background: url("../public/Market/handPhone.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  position: absolute;
+  width: 60vw;
+  height: 94vh;
+  left: 56vw;
+  top: 11vh;
+}

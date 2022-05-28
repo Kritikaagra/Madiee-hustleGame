@@ -1,0 +1,27 @@
+[
+{
+"cardSrc": "../Cards/tomatoCard.png",
+"cardCount": 2
+},
+{
+"cardSrc": "../Cards/brinjalCard.png",
+"cardCount": 2
+},
+{
+"cardSrc": "../Cards/lemonCard.png",
+"cardCount": 0
+},
+{
+"cardSrc": "../Cards/greenPeaCard.png",
+"cardCount": 3
+},
+{
+"cardSrc": "../Cards/carrotCard.png",
+"cardCount": 3
+},
+{
+"cardSrc": "../Cards/ruleCard.png",
+"cardText": "Click here to view",
+"cardCount": 2
+}
+]
